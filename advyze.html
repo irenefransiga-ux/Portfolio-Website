@@ -11,24 +11,30 @@
   <link rel="mask-icon" href="img/Icon/safari-pinned-tab.svg" color="#5c5c5c">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- Header -->
-  <header style="background-color:lightgray;">
-    <div>
-      <img src="img/Logo/Logo.svg" alt="Logo-IreneFransiga" width="100" height="70">
-      <nav>
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact"> Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="header">
+      <div >
+        <a href="index.html">
+          <img id="logo" src="img/Logo/Logo.svg" alt="Logo-IreneFransiga" height="100">
+        </a>
+          <nav class="navigation-container">
+              <ul>
+                  <li><a href="index.html">Work</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="#contact"> Contact</a></li>
+              </ul>
+          </nav>
+      </div>
   </header>
 <!-- MAIN -->
-<div>
+<div class="portfolio">
   <p>Hello! Advyze is a UX case study project that I did under the supervision of CareerFoundry.
   The project was created within 6 months period, October 2019 - March 2020. </p>
 </div>
@@ -41,12 +47,12 @@
 
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer id="contact" class="footer">
     <div>
       <h2>Get in touch</h2>
       <p> Let's discuss opportunities! Please get in touch.
-        Call at <a href="tel:+12533325743">+1(253)332-5743</a>
-        or <a href="mailto:irenefransiga@gmail.com">Email</a>
+        Call at <a href="tel:+12533325743" class="button contact">+1(253)332-5743</a>
+        or <a href="mailto:irenefransiga@gmail.com" class="button contact">irenefransiga@gmail.com</a>
       </p>
     </div>
     <!-- social media placeholder -->
