@@ -45,8 +45,11 @@ h4{
 img{
   width: 100%;
 }
-#logo{
+.logo{
   float: left;
+}
+.active{
+  color: #404040;
 }
 .navigation-container ul{
 display: inline;
