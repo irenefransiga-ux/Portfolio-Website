@@ -10,8 +10,11 @@ Colors used:
 - Header Color: #404040
 - Text Color: #000000
 */
+* {
+  box-sizing: border-box;
+}
 
-body{
+body {
   background-color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -19,100 +22,192 @@ body{
   line-height: 1.6;
   color: #000000;
 }
-footer{
+
+footer {
   background-color: #E6E6E6;
 }
-h1,h2,h3,h4{
+
+h1, h2, h3, h4 {
   color: #404040;
   line-height: 1.4;
 }
-h1{
-  font-size: 1.75em; /* em means multiply by parent fontsize*/
+
+h1 {
+  font-size: 1.75em;
+  /* em means multiply by parent fontsize*/
   font-weight: 900;
 }
-h2{
+
+h2 {
   font-size: 1.50em;
   font-weight: 700;
 }
-h3{
+
+h3 {
   font-size: 1.05em;
   font-weight: 500;
 }
-h4{
+
+h4 {
   font-size: 1.05em;
   font-weight: 500;
 }
-img{
+
+img {
   width: 100%;
 }
-.logo{
-  float: left;
+
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  position: fixed;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
 }
-.active{
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  padding: 0px;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #BFBFBF;
+}
+
+.logo {
+  /*float: left;*/
+  max-height: 100px;
+}
+
+.active {
   color: #404040;
 }
-.navigation-container ul{
-display: inline;
-list-style-type: none;
+
+.social svg {
+  height: 20px;
 }
-.navigation-container li{
-  display: inline-block;
-  padding: 20px;
+
+main {
+  padding-top: 150px;
 }
-a{
-  color:#BFBFBF;
+
+a {
+  color: #BFBFBF;
   background-color: transparent;
   text-align: center;
   text-decoration: none;
 }
+
 a:hover,
-a:focus{
+a:focus {
   color: #404040;
 }
-a:active{
+
+a:active {
   color: #404040;
 }
-.button{
+
+.container {
+  max-width: 1200px;
+}
+
+.button {
   display: inline-block;
   background-color: #BFBFBF;
-  color: #000000 !important; /* overiding th e original link color */
+  color: #000000 !important;
+  /* overiding th e original link color */
   font-weight: 400;
   padding: 5px;
   border-radius: 10px;
-  border: 5px solid #BFBFBF;  /*width of border - type - color */
+  border: 5px solid #BFBFBF;
+  /*width of border - type - color */
   transition: 0.2s opacity;
 }
+
 .button:hover,
-.button:focus{
-  opacity: 0.7; /*80%*/
+.button:focus {
+  opacity: 0.7;
+  /*80%*/
   text-decoration: none;
 }
-.button:active{
-  opacity:1.2;
+
+.button:active {
+  opacity: 1.2;
 }
-.button.resume{
+
+.button.resume {
   display: inline-block;
   background-color: #BFBFBF;
-  color: #000000 !important; /* overiding th e original link color */
+  color: #000000 !important;
+  /* overiding th e original link color */
   font-weight: 400;
   padding: 5px;
   border-radius: 10px;
-  border: 5px solid #BFBFBF;  /*width of border - type - color */
+  border: 5px solid #BFBFBF;
+  /*width of border - type - color */
   transition: 0.2s opacity;
 }
+
 .button.resume:hover,
-.button.resume:focus{
-  opacity: 0.7; /*80%*/
+.button.resume:focus {
+  opacity: 0.7;
+  /*80%*/
   text-decoration: none;
 }
-.button.resume:active{
-  opacity:1.2;
+
+.button.resume:active {
+  opacity: 1.2;
 }
-.button.contact{
+
+.button.contact {
   background-color: transparent;
   border: none;
 }
+
 .button.contact:hover,
-.button.contact:focus{
+.button.contact:focus {
   opacity: 0.5;
+}
+
+/*Layout styling */
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#hero {
+  /*background-color: #ffe4c4;*/
+  display: inline-block;
+  width: 100%;
+}
+
+#hero h1 {
+  text-align: center;
+}
+
+#contact h2 {
+  padding-top: 20px;
+}
+
+#contact .container p {
+  line-height: 1;
 }
