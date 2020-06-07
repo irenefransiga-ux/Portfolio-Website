@@ -120,6 +120,8 @@ a:active {
 
 .container {
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button {
@@ -132,12 +134,13 @@ a:active {
   border-radius: 10px;
   border: 5px solid #BFBFBF;
   /*width of border - type - color */
-  transition: 0.2s opacity;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 
 .button:hover,
 .button:focus {
-  opacity: 0.7;
+  opacity: 0.8;
   /*80%*/
   text-decoration: none;
 }
@@ -180,15 +183,31 @@ a:active {
   opacity: 0.5;
 }
 
-/*Layout styling */
-.container {
-  padding: 0 15px;
-}
-
 .row {
   margin: 25px 0;
 }
-
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px, 50px);}
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px, 48px);}
+  to {transform: translate(100px, 48px);}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+.cloud-front{
+  animation: 30s cloud-move infinite alternate linear;
+}
+.cloud-back{
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
 #work .row {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
@@ -210,4 +229,59 @@ a:active {
 
 #contact .container p {
   line-height: 1;
+}
+/* ===================================
+Medium devices (640px and larger)
+==================================== */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  body {
+    font-size: 18px;
+  }
+  #hero span {
+    display: block;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  [class*="col-"] {
+    float:left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 {
+    margin-top: 0;
+  }
+}
+/* ===================================
+Large devices (1024px and larger)
+====================================*/
+@media only screen and (min-width: 1024px) {
+  .col-lg-5{
+    width: 40%;
+  }
+  .col-lg-7{
+    width: 60%;
+  }
+  body{
+    font-size: 20px;
+  }
+}
+
+/* ===================================
+X-Large devices (1440px and larger)
+====================================*/
+@media only screen and (min-width: 1440px) {
 }
